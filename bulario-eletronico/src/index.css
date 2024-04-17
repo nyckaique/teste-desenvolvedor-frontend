@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  font-family: "Jost";
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+}
+.btn {
+  @apply rounded-xl py-2 px-4 bg-sky-700 uppercase hover:bg-sky-900 hover:transition-all text-white;
+}
