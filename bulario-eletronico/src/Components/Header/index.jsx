@@ -15,6 +15,17 @@ export default function Header() {
       <h1 className="text-4xl font-bold my-auto mx-auto pb-4 flex flex-col items-center uppercase gap-4">
         <span className="text-rose-700">bulário</span>
         <span className="text-sky-800">eletrônico</span>
+        <span className="text-xs text-sky-800">
+          Desenvolvido por{" "}
+          <a
+            href="https://linkedin.com/in/nycollaskaique"
+            target="_blank"
+            rel="noreferrer"
+            className="underline"
+          >
+            Nycollas Kaique
+          </a>
+        </span>
       </h1>
       <span>
         <img
