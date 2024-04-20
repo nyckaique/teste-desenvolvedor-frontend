@@ -2,7 +2,7 @@ import { createContext, useState, useEffect } from "react";
 import axios from "axios";
 import dayjs from "dayjs";
 import { toast } from "react-toastify";
-import data from "../../../api/dotlib.json"; // Importa o arquivo JSON
+import data from "../dotlib.json"; // Importa o arquivo JSON
 
 export const ApiContext = createContext({});
 const url = process.env.PUBLIC_URL; // Obtém o diretório raiz do seu aplicativo
