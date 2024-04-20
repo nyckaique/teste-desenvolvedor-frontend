@@ -2,27 +2,37 @@ import { createContext, useState, useEffect } from "react";
 import axios from "axios";
 import dayjs from "dayjs";
 import { toast } from "react-toastify";
+import data from "../../../api/dotlib.json"; // Importa o arquivo JSON
 
 export const ApiContext = createContext({});
+const url = process.env.PUBLIC_URL; // Obtém o diretório raiz do seu aplicativo
+
+// Substitui "%PUBLIC_URL%" pelo diretório raiz do aplicativo
+const documentos = data.documents.map((documento) => ({
+  ...documento,
+  url: documento.url.replace("%PUBLIC_URL%", url),
+}));
+
+// Use a variável 'documentos' em seu aplicativo
 
 export default function ApiProvider({ children }) {
-  const [medicamentos, setMedicamentos] = useState([{}]);
+  const [medicamentos, setMedicamentos] = useState(documentos);
   const [filtro, setFiltro] = useState("");
   const [medicamentosFiltrados, setMedicamentosFiltrados] = useState([{}]);
   const [paginaAtual, setPaginaAtual] = useState(1);
 
-  useEffect(() => {
-    async function carregarMedicamentos() {
-      try {
-        const resposta = await axios.get("http://localhost:3000/data");
-        setMedicamentos(resposta.data);
-        console.log(resposta.data);
-      } catch (error) {
-        toast.error("Não foi possível carregar os medicamentos do servidor.");
-      }
-    }
-    carregarMedicamentos();
-  }, []);
+  // useEffect(() => {
+  //   async function carregarMedicamentos() {
+  //     try {
+  //       const resposta = await axios.get("http://localhost:3000/data");
+  //       setMedicamentos(resposta.data);
+  //       console.log(resposta.data);
+  //     } catch (error) {
+  //       toast.error("Não foi possível carregar os medicamentos do servidor.");
+  //     }
+  //   }
+  //   carregarMedicamentos();
+  // }, []);
 
   function normalizarString(texto) {
     return texto
