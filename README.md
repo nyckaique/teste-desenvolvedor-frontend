@@ -2,6 +2,8 @@
 
 ## Desenvolvido por: Nycollas Kaique de Paula Castilho Borges
 
+https://bularioeletronico.netlify.app/.netlify/
+
 ### Tecnologias
 
 - React JS
