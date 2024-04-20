@@ -8,7 +8,7 @@ export default function Header() {
         <img
           src={bg01}
           alt="Imagem da esquerda"
-          class="w-auto h-auto max-w-full"
+          className="w-auto h-auto max-w-full"
         />
       </span>
 
@@ -20,7 +20,7 @@ export default function Header() {
         <img
           src={bg02}
           alt="Imagem da direita"
-          class="w-auto h-auto max-h-72 max-w-full"
+          className="w-auto h-auto max-h-72 max-w-full"
         />
       </span>
     </div>

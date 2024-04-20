@@ -3,36 +3,38 @@ import axios from "axios";
 import dayjs from "dayjs";
 import { toast } from "react-toastify";
 import data from "../dotlib.json"; // Importa o arquivo JSON
+console.log(data); // Verifique se os dados estão sendo carregados corretamente
 
 export const ApiContext = createContext({});
-const url = process.env.PUBLIC_URL; // Obtém o diretório raiz do seu aplicativo
-
-// Substitui "%PUBLIC_URL%" pelo diretório raiz do aplicativo
-const documentos = data.documents.map((documento) => ({
-  ...documento,
-  url: documento.url.replace("%PUBLIC_URL%", url),
-}));
 
 // Use a variável 'documentos' em seu aplicativo
 
 export default function ApiProvider({ children }) {
-  const [medicamentos, setMedicamentos] = useState(documentos);
+  const [medicamentos, setMedicamentos] = useState([]);
   const [filtro, setFiltro] = useState("");
   const [medicamentosFiltrados, setMedicamentosFiltrados] = useState([{}]);
   const [paginaAtual, setPaginaAtual] = useState(1);
 
-  // useEffect(() => {
-  //   async function carregarMedicamentos() {
-  //     try {
-  //       const resposta = await axios.get("http://localhost:3000/data");
-  //       setMedicamentos(resposta.data);
-  //       console.log(resposta.data);
-  //     } catch (error) {
-  //       toast.error("Não foi possível carregar os medicamentos do servidor.");
-  //     }
-  //   }
-  //   carregarMedicamentos();
-  // }, []);
+  useEffect(() => {
+    // Verifica se 'data' é um array
+    if (Array.isArray(data)) {
+      // Mapeia sobre cada objeto no array 'data'
+      const documentosArray = data.map((objeto) => ({
+        ...objeto,
+        // Mapeia sobre cada documento dentro do objeto
+        documents: objeto.documents.map((documento) => ({
+          ...documento,
+          // Substitui a URL utilizando o valor de 'process.env.PUBLIC_URL'
+          url: documento.url.replace("%PUBLIC_URL%", process.env.PUBLIC_URL),
+        })),
+      }));
+
+      // Define o estado 'documentos' como o array de documentos
+      setMedicamentos(documentosArray);
+    } else {
+      console.error("Formato de dados inválido");
+    }
+  }, []);
 
   function normalizarString(texto) {
     return texto
@@ -42,6 +44,7 @@ export default function ApiProvider({ children }) {
   }
 
   function handleFiltro() {
+    console.log(medicamentos);
     if (filtro !== "") {
       const busca = normalizarString(filtro);
       const listaFiltrada = medicamentos.filter((medicamento) => {
