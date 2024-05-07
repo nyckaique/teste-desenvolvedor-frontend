@@ -3,12 +3,12 @@ import bg02 from "../../assets/bg02.png";
 
 export default function Header() {
   return (
-    <div className="w-full flex justify-between items-end px-2 pt-4 bg-header  rounded-b-3xl">
+    <div className="w-full flex justify-between items-end px-2 pt-4 bg-header  rounded-b-3xl overflow-hidden">
       <span className="max-w-[20%]">
         <img
           src={bg01}
           alt="Imagem da esquerda"
-          className="w-auto max-h-[200px] max-w-[200px]"
+          className="w-auto max-h-[200px] "
         />
       </span>
 
@@ -20,7 +20,7 @@ export default function Header() {
         <img
           src={bg02}
           alt="Imagem da direita"
-          className="w-auto max-h-[200px] max-w-[200px]"
+          className="w-auto max-h-[200px] "
         />
       </span>
     </div>
