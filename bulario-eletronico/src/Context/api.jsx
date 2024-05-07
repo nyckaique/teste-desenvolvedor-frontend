@@ -1,9 +1,9 @@
 import { createContext, useState, useEffect } from "react";
-import axios from "axios";
+
 import dayjs from "dayjs";
 import { toast } from "react-toastify";
 import data from "../dotlib.json"; // Importa o arquivo JSON
-console.log(data); // Verifique se os dados estão sendo carregados corretamente
+//console.log(data); // Verifique se os dados estão sendo carregados corretamente
 
 export const ApiContext = createContext({});
 
@@ -14,6 +14,10 @@ export default function ApiProvider({ children }) {
   const [filtro, setFiltro] = useState("");
   const [medicamentosFiltrados, setMedicamentosFiltrados] = useState([{}]);
   const [paginaAtual, setPaginaAtual] = useState(1);
+  const [classification, setClassification] = useState("TODOS");
+  const [medicamentosClassificados, setMedicamentosClassificados] = useState(
+    []
+  );
 
   useEffect(() => {
     // Verifica se 'data' é um array
@@ -34,7 +38,17 @@ export default function ApiProvider({ children }) {
     } else {
       console.error("Formato de dados inválido");
     }
-  }, []);
+  }, [data]);
+  useEffect(() => {
+    // Executa classificationFilter somente quando 'medicamentos' for atualizado
+    if (medicamentos.length > 0) {
+      classificationFilter();
+    }
+  }, [medicamentos]); // Adiciona 'medicamentos' como dependência para o useEffect
+  useEffect(() => {
+    // Executa classificationFilter somente quando 'medicamentos' for atualizado
+    classificationFilter();
+  }, [classification]); // Adiciona 'medicamentos' como dependência para o useEffect
 
   function normalizarString(texto) {
     return texto
@@ -44,10 +58,13 @@ export default function ApiProvider({ children }) {
   }
 
   function handleFiltro() {
-    console.log(medicamentos);
+    //console.log("classificacao na busca", classification);
+    classificationFilter();
+    //console.log("medicamentos", medicamentos);
+    //console.log("medicamentos classificados", medicamentosClassificados);
     if (filtro !== "") {
       const busca = normalizarString(filtro);
-      const listaFiltrada = medicamentos.filter((medicamento) => {
+      const listaFiltrada = medicamentosClassificados.filter((medicamento) => {
         let medicamentoName = normalizarString(medicamento.name);
         let medicamentoCompany = normalizarString(medicamento.company);
 
@@ -88,6 +105,21 @@ export default function ApiProvider({ children }) {
     }
   }
 
+  function classificationFilter() {
+    const listaFiltrada = medicamentos.filter((medicamento) => {
+      if (classification === "TODOS") {
+        return medicamento;
+      } else if (medicamento.classification === classification) {
+        return medicamento;
+      }
+    });
+    //console.log("medicamentos classificados: ", listaFiltrada);
+    setMedicamentosClassificados(listaFiltrada);
+  }
+  function cleanTable() {
+    setMedicamentosFiltrados([{}]);
+  }
+
   return (
     <ApiContext.Provider
       value={{
@@ -98,6 +130,8 @@ export default function ApiProvider({ children }) {
         setFiltro,
         handleFiltro,
         filtro,
+        setClassification,
+        cleanTable,
       }}
     >
       {children}

@@ -1,6 +1,6 @@
 export default function Busca({ handleFiltro, setFiltro, filtro }) {
   return (
-    <div className="w-fit mx-auto my-4 bg-emerald-500 rounded-3xl flex flex-col justify-center items-center p-6 gap-4 text-lg">
+    <div className="w-fit mx-auto my-4 bg-emerald-500 rounded-3xl flex flex-col justify-center items-center p-4 gap-4 text-lg">
       <label className="text-center">
         Busque pelo medicamento ou laboratório
       </label>
@@ -11,7 +11,7 @@ export default function Busca({ handleFiltro, setFiltro, filtro }) {
           id=""
           value={filtro}
           onChange={(e) => setFiltro(e.target.value)}
-          className="rounded-xl p-2 bg-emerald-100 block"
+          className="rounded-xl p-2 bg-slate-50 block"
         />
         <button onClick={handleFiltro} className="btn">
           buscar

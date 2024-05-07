@@ -8,7 +8,7 @@ export default function Tabela({
   medicamentosDaPaginaAtual,
 }) {
   return (
-    <div className="flex flex-col w-full max-w-full p-8  items-center rounded-3xl gap-4">
+    <div className="flex flex-col w-full max-w-full px-8 pt-0 pb-4  items-center rounded-3xl gap-4">
       <div className="flex gap-4">
         <button
           onClick={handlePaginaAnterior}
@@ -32,7 +32,9 @@ export default function Tabela({
             <Medicamento key={index} medicamento={medicamento} />
           ))
         ) : (
-          <p>Digite algo e clique em buscar.</p>
+          <p className="bg-emerald-500 rounded-xl p-1">
+            Digite algo e clique em buscar.
+          </p>
         )}
       </div>
     </div>

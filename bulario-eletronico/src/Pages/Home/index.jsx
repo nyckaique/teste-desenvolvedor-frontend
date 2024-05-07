@@ -3,6 +3,8 @@ import Header from "../../Components/Header";
 import Tabela from "../../Components/Tabela";
 import { ApiContext } from "../../Context/api";
 import { useContext } from "react";
+import "../../index.css";
+import Seletor from "../../Components/Seletor";
 export default function Home() {
   const {
     paginaAtual,
@@ -32,20 +34,38 @@ export default function Home() {
       : [];
 
   return (
-    <div>
-      <Header />
-      <Busca
-        setFiltro={setFiltro}
-        handleFiltro={handleFiltro}
-        filtro={filtro}
-      />
-      <Tabela
-        handlePaginaAnterior={handlePaginaAnterior}
-        handleProximaPagina={handleProximaPagina}
-        paginaAtual={paginaAtual}
-        medicamentosFiltrados={medicamentosFiltrados}
-        medicamentosDaPaginaAtual={medicamentosDaPaginaAtual}
-      />
+    <div className="bg flex flex-col min-h-screen">
+      {/* conteudo */}
+      <div className="flex-1">
+        <Header />
+        <Seletor />
+        <Busca
+          setFiltro={setFiltro}
+          handleFiltro={handleFiltro}
+          filtro={filtro}
+        />
+        <Tabela
+          handlePaginaAnterior={handlePaginaAnterior}
+          handleProximaPagina={handleProximaPagina}
+          paginaAtual={paginaAtual}
+          medicamentosFiltrados={medicamentosFiltrados}
+          medicamentosDaPaginaAtual={medicamentosDaPaginaAtual}
+        />
+      </div>
+
+      <div className="w-full mx-auto flex">
+        <span className="w-full text-xs font-bold uppercase text-center bg-emerald-500 p-2 rounded-t-3xl">
+          Desenvolvido por{" "}
+          <a
+            href="https://linkedin.com/in/nycollaskaique"
+            target="_blank"
+            rel="noreferrer"
+            className="underline"
+          >
+            Nycollas Kaique
+          </a>
+        </span>
+      </div>
     </div>
   );
 }

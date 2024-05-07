@@ -23,7 +23,8 @@
         "id": "595aeb0d-5b0d-4a05-a6f6-574a291ad574",
         "name": "HIDROQUINONA"
       }
-    ]
+    ],
+    "classification": "ANTIBIÓTICO"
   },
   {
     "id": "9d0594ea-b9ee-42b6-b8e6-53a43eaf50bf",
@@ -49,7 +50,8 @@
         "id": "d0e8fd86-f131-4f9d-aceb-7af4c544e746",
         "name": "PARACETAMOL"
       }
-    ]
+    ],
+    "classification": "OUTRO"
   },
   {
     "id": "0566bac0-b5d5-40d7-9eb8-e76c885adf60",
@@ -79,7 +81,8 @@
         "id": "9ae4d170-c78a-4cea-a7be-fb2bfa7d0433",
         "name": "INSULINA DETEMIR"
       }
-    ]
+    ],
+    "classification": "TARJA VERMELHA"
   },
   {
     "id": "6437d8a8-2694-4d2c-9a10-7163512b3bb7",
@@ -105,7 +108,8 @@
         "id": "505e6d79-feac-4d79-86d8-7a892ba7a6dc",
         "name": "ÁCIDO ASCÓRBICO"
       }
-    ]
+    ],
+    "classification": "ANTIBIÓTICO"
   },
   {
     "id": "01b155eb-c03d-4345-8a1a-64ad0dac98c1",
@@ -135,7 +139,8 @@
         "id": "802ccb1c-5499-4c73-8f0a-af81137168ad",
         "name": "ALFACORIOGONADOTROPINA"
       }
-    ]
+    ],
+    "classification": "OUTRO"
   },
   {
     "id": "60c21279-165a-4ed8-8987-048ff2dedff5",
@@ -161,7 +166,8 @@
         "id": "07915236-c9d8-4d3d-8a19-3c31b82d7f02",
         "name": "DIPIRONA MONOIDRATADA"
       }
-    ]
+    ],
+    "classification": "OUTRO"
   },
   {
     "id": "8e6f5b3c-72c8-46be-9b11-095108b9b691",
@@ -187,7 +193,8 @@
         "id": "203c304a-939e-440e-b7cc-ad278855fb5b",
         "name": "MALEATO DE CLORFENIRAMINA"
       }
-    ]
+    ],
+    "classification": "OUTRO"
   },
   {
     "id": "eb48ad46-5e44-4492-bddf-20e010dc0144",
@@ -213,7 +220,8 @@
         "id": "c8dc701b-ae89-49a6-a41d-14bcdeb99262",
         "name": "FLUMAZENIL"
       }
-    ]
+    ],
+    "classification": "ANTIBIÓTICO"
   },
   {
     "id": "f59759c8-9819-4417-82c2-a4d39385ec9f",
@@ -239,7 +247,8 @@
         "id": "468fd4bc-3f34-4e38-9908-85057cd2ff79",
         "name": "SIMETICONA"
       }
-    ]
+    ],
+    "classification": "TARJA VERMELHA"
   },
   {
     "id": "c201fb44-5d80-44e6-8d9c-9c15905fe269",
@@ -265,7 +274,8 @@
         "id": "d3e6c416-d673-4cbb-a069-db61b753b968",
         "name": "CARBAMAZEPINA"
       }
-    ]
+    ],
+    "classification": "ANTIBIÓTICO"
   },
   {
     "id": "da62bcff-f1fa-4cac-a73c-73682f257045",
@@ -291,7 +301,8 @@
         "id": "c3ba72cf-2e5c-4338-b387-96e65f976492",
         "name": "FUROSEMIDA"
       }
-    ]
+    ],
+    "classification": "TARJA VERMELHA"
   },
   {
     "id": "afbd1b6c-fe7d-4d96-b154-be99593f27d5",
@@ -317,7 +328,8 @@
         "id": "69f3fdd7-538e-494e-b3cb-bbf3f5ec4a46",
         "name": "TIGECICLINA"
       }
-    ]
+    ],
+    "classification": "ANTIBIÓTICO"
   },
   {
     "id": "d2529732-2e13-429d-b2d4-72d35562bf7e",
@@ -343,7 +355,8 @@
         "id": "928cc693-7a08-4f96-85a9-2dc49e7bcd4f",
         "name": "IBUPROFENO"
       }
-    ]
+    ],
+    "classification": "ANTIBIÓTICO"
   },
   {
     "id": "d9524311-9b56-4dbc-b904-c208ca1fea3e",
@@ -369,7 +382,8 @@
         "id": "4fc9f1ae-5503-4974-b7e5-86d41af32f46",
         "name": "MALEATO DE DEXCLORFENIRAMINA"
       }
-    ]
+    ],
+    "classification": "ANTIBIÓTICO"
   },
   {
     "id": "c3fadb4e-caa2-4774-aa9c-5a422b4034cf",
@@ -395,7 +409,8 @@
         "id": "52b6792f-0330-421f-b155-a27f418ffb4d",
         "name": "TADALAFILA"
       }
-    ]
+    ],
+    "classification": "ANTIBIÓTICO"
   },
   {
     "id": "bf501432-497d-4395-8e0e-be2beb9c89a2",
@@ -421,7 +436,8 @@
         "id": "378b43c0-a16d-4217-aae5-89f846eb4d43",
         "name": "CLORIDRATO DE DONEPEZILA"
       }
-    ]
+    ],
+    "classification": "ANTIBIÓTICO"
   },
   {
     "id": "b9bfc099-a71e-45a2-989d-dd7d4ad20e28",
@@ -447,7 +463,8 @@
         "id": "4588c498-8d9c-4e89-9433-d24b9df5e659",
         "name": "BESILATO DE ANLODIPINO"
       }
-    ]
+    ],
+    "classification": "ANTIBIÓTICO"
   },
   {
     "id": "cea5751e-600e-4894-a577-8a95ef13da8c",
@@ -473,7 +490,8 @@
         "id": "ef568c1b-a887-4c42-93cb-1d11af271bc5",
         "name": "CAPTOPRIL"
       }
-    ]
+    ],
+    "classification": "ANTIBIÓTICO"
   },
   {
     "id": "ae0fa063-66a9-4cdf-b920-62742ee2b72e",
@@ -499,7 +517,8 @@
         "id": "802ccb1c-5499-4c73-8f0a-af81137168ad",
         "name": "ALFACORIOGONADOTROPINA"
       }
-    ]
+    ],
+    "classification": "TARJA VERMELHA"
   },
   {
     "id": "2b52d716-b7d4-4e89-8c23-856b1870df73",
@@ -529,7 +548,8 @@
         "id": "6c79de3c-1c87-4ab5-9a88-32901790c16b",
         "name": "CLAVULANATO DE POTÁSSIO"
       }
-    ]
+    ],
+    "classification": "ANTIBIÓTICO"
   },
   {
     "id": "7bdaf271-f8b0-4bfc-9860-0f83fb8d57e2",
@@ -555,7 +575,8 @@
         "id": "2b0dedbc-f9b4-470b-b7e5-2869ab5334ab",
         "name": "CLORIDRATO DE SERTRALINA"
       }
-    ]
+    ],
+    "classification": "ANTIBIÓTICO"
   },
   {
     "id": "76061abe-7ce6-48e7-8d2e-c855f499caab",
@@ -581,7 +602,8 @@
         "id": "36008ff3-ac98-4c0b-8928-5ac545ea2fc4",
         "name": "FLURBIPROFENO"
       }
-    ]
+    ],
+    "classification": "OUTRO"
   },
   {
     "id": "8811bc81-95a9-40d8-8d09-2c9de89b5ae1",
@@ -607,7 +629,8 @@
         "id": "cb7f7386-5bff-48b6-a8fc-952a506e4061",
         "name": "FÍMBRIAS"
       }
-    ]
+    ],
+    "classification": "OUTRO"
   },
   {
     "id": "502618e2-1588-4968-b356-a3f3f28cb7ce",
@@ -633,7 +656,8 @@
         "id": "d3e6c416-d673-4cbb-a069-db61b753b968",
         "name": "CARBAMAZEPINA"
       }
-    ]
+    ],
+    "classification": "ANTIBIÓTICO"
   },
   {
     "id": "06d03378-c4a0-435a-828e-e622ab64453f",
@@ -663,6 +687,7 @@
         "id": "bb5ac910-e7fd-419c-b650-06873c2835b9",
         "name": "NISTATINA"
       }
-    ]
+    ],
+    "classification": "TARJA VERMELHA"
   }
 ]

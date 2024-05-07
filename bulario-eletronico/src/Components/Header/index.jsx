@@ -3,7 +3,7 @@ import bg02 from "../../assets/bg02.png";
 
 export default function Header() {
   return (
-    <div className="w-full flex justify-between items-end px-2 pt-4 bg-gradient-to-b from-white to-emerald-500 rounded-b-3xl">
+    <div className="w-full flex justify-between items-end px-2 pt-4 bg-header  rounded-b-3xl">
       <span>
         <img
           src={bg01}
@@ -15,17 +15,6 @@ export default function Header() {
       <h1 className="text-4xl font-bold my-auto mx-auto pb-4 flex flex-col items-center uppercase gap-4">
         <span className="text-rose-700">bulário</span>
         <span className="text-sky-800">eletrônico</span>
-        <span className="text-xs text-sky-800">
-          Desenvolvido por{" "}
-          <a
-            href="https://linkedin.com/in/nycollaskaique"
-            target="_blank"
-            rel="noreferrer"
-            className="underline"
-          >
-            Nycollas Kaique
-          </a>
-        </span>
       </h1>
       <span>
         <img

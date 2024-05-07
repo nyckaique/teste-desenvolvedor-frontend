@@ -1,6 +1,6 @@
 export default function Medicamento({ medicamento }) {
   return (
-    <div className="flex flex-col sm:flex-row gap-4 w-full max-w-full flex-shrink justify-between bg-slate-200 p-4 rounded-3xl">
+    <div className="flex flex-col sm:flex-row gap-4 w-full max-w-full flex-shrink justify-between bg-slate-50 p-4 rounded-3xl">
       <div className="sm:w-1/2">
         <p>
           <span className="font-semibold">Nome:</span> {medicamento.name}
